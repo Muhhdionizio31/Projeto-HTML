@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Imagens/logo2.png">
+</head>
+
+<body>
+
+
+    <header>
+        <img src="Imagens/Design sem nome.png" alt="SmartTech" style="width: 150px; height: auto;">
+        <ul>
+            <li><a href="quem-somos.html">Quem Somos</a></li>
+            <li><a href="#sac">SAC - Atendimento</a></li>
+            <li><a href="#produtos">Produtos</a></li>          
+        </ul>
+
+    </header>
+
+        
+    <div class="texto-inicial">
+        <section>
+            <h1>📱 Bem-vindo à Smartech</h1>
+            <p>Na Smartech, você encontra o que há de mais moderno em tecnologia Apple. Trabalhamos com os modelos mais recentes de iPhones, conhecidos mundialmente por sua inovação, desempenho e design elegante.
+
+                Seja você um fã da Apple ou alguém buscando um smartphone confiável e sofisticado, temos o modelo ideal para o seu dia a dia. Todos os nossos aparelhos são originais, com garantia e passam por um rigoroso controle de qualidade.
+                
+                Além de produtos de ponta, oferecemos um atendimento diferenciado, sempre pronto para tirar suas dúvidas e te ajudar a fazer a melhor escolha. A Smartech nasceu com o propósito de entregar confiança, qualidade e tecnologia, tudo em um só lugar.
+                
+                Descubra o iPhone perfeito para você. 💙</p>
+
+        </section>
+    </div>
+
+    <main> <!--Elemneto semantico que indica conteudo principal.-->
+
+        <div class="div-principal"> <!--Div principal, conteiner que agrupa 
+        caracteristicas do site com titlo. botões-->
+
+            <h2>Iphone e suas versões</h2>
+            <!--H2 e H3 Cabeçalho em ordem heraiquica H2 é o titulo.-->
+            <p>Em dois tamanhos perfeitos.</p>
+            <p>Em novas cores.</p>
+            <h3>Além de um celular, não só um Iphone, O que tem de melhor para o seu dia.</h3> <!--Texto explicativo-->
+
+            <h6>A partir de R$ 899.50/Mês ou R$ 10.899*</h6>
+
+            <button  id="produtos">Comprar</button> <!--Botão de ação-->
+
+            <h5>Escolha sua cor:</h5>
+
+            <div class="opcoes-cores">
+                <!--Botão de escolha das cores type = "radio"-->
+                <input type="radio" name="cor" id="amarelo" onclick="trocar_imagem('iphone-amarelo.png')">
+                <label for="amarelo" class="cor-amarelo"></label>
+
+                <input type="radio" name="cor" id="azul" onclick="trocar_imagem('iphone-azul.png')">
+                <label for="azul" class="cor-azul"></label>
+
+                <input type="radio" name="cor" id="branco" onclick="trocar_imagem('iphone-branco.png')">
+                <label for="branco" class="cor-branco"></label>
+
+                <input type="radio" name="cor" id="preto" onclick="trocar_imagem('iphone-preto.png')">
+                <label for="preto" class="cor-preto"></label>
+
+                <input type="radio" name="cor" id="roxo" onclick="trocar_imagem('iphone-roxo.png')">
+                <label for="roxo" class="cor-roxo"></label>
+
+                <input type="radio" name="cor" id="vermelho" onclick="trocar_imagem('iphone-vermelho.png')">
+                <label for="vermelho" class="cor-vermelho"></label>
+
+            </div>
+
+        </div>
+
+        <img id="iphone-img" class="imagem-cel" src="Imagens/iphone-azul.png" alt="Iphone Azul" />
+    </main>
+        
+    <footer id="sac">
+
+        <p>Telefone: 4002-8222 Email: smarttech33@gmail.com</p>
+
+    </footer>
+        
+        
+        <script>
+            /* Função trocar imagem */
+
+            function trocar_imagem(nomeImagem) {
+                var img = document.getElementById("iphone-img");
+
+                img.src = "Imagens/" + nomeImagem;
+
+                img.onerror = function () {
+                    this.src = "Imagens/iphone-azul.png";
+                };
+            }
+
+
+        </script>
+</body>
+</html>
